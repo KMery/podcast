@@ -1,0 +1,373 @@
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* Header */   
+ul {
+    list-style-type: none;
+  }
+
+p, footer, .menu{
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Container divisor */
+.container {
+    overflow: hidden;
+}
+
+.divisor {
+    text-align: center;
+}
+
+nav input {
+  display:none;
+}
+
+/* Boton */
+.button {
+    background-color: #00F3BB;
+    border: none;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 288px;
+    height: 48px;
+  } 
+
+.button:hover {
+  background-image: linear-gradient(#0000FE, #00F0B8);
+}
+
+h1 span {
+    text-decoration: line-through;
+}
+
+h2 {
+  text-align: left;
+}
+
+#Home p {
+    text-align: justify;
+    margin: auto;
+    padding-bottom: 30px;
+}
+  
+#Episodes h2 {
+  color: #FFFFFF;
+}
+
+.spoty iframe {
+    height: 100%;
+    width: 100%; 
+    border: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+}
+
+footer .fab {
+  padding: 15px;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 900px)  {
+  /* Menu desktop */
+  /* Saco los iconos y checkbox (estan en mobile)*/
+    label {
+      display:none;
+    }
+
+    nav input:checked ~ label span {
+      display:none;
+    }  
+
+    .topnav img {
+      float: left;
+      max-width: 36px;
+    }
+
+    .topnav  #menu {
+      float: right;
+    }
+    
+    .topnav #menu li {
+      display: inline-block;
+      padding-right: 48px;
+      margin-right: 11px;
+    }
+
+    #menu li a {
+        text-decoration: none;
+    }
+
+    #menu li a:hover, #menu li a:active {
+      text-decoration: line-through;
+    }
+
+    #menu li a:active {
+      color: #060A24;
+    }
+
+    .button {
+      float: left;
+    }
+
+    .divisor {
+      padding: 0px 100px 100px;
+    }
+
+    h1 {
+      font-size: 64px;
+      padding-top: 100px;
+      text-align: left;
+    }
+
+    h2 {
+      font-size: 48px;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    .spoty, #phone, .Invitadas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Invitadas img {
+      flex: 1 0 30%;
+    }
+
+    #Episodes, .novedades {
+      background-color: darkblue;
+      clip-path: polygon(0 12%, 100% 0, 100% 88%, 0 100%);
+      z-index: -1;
+    }
+
+    #Episodes {
+      padding: 72px;
+      min-height: 26.7%;
+      padding-bottom: 172px;
+    }
+
+    .spoty iframe{
+      max-width: 40.6%;
+      min-height: 232px;
+      padding: 11px;
+    }
+
+    .phonecol , .spoty iframe {
+      flex: 1 0 46%;
+    }
+
+    #phone img {
+      min-width: 31.8%;
+      padding-right: 62.4px;
+    }
+
+    #phone {
+      min-width: 32.2%;
+      margin: 0 100px 0 100px;
+      padding: 64px;
+      transform: translate(0px, -150px);
+      min-width: 457.6px;
+    }
+
+/* Temas */
+    .temas {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;      
+    }
+
+    #temas {
+      display: flex;
+      flex-wrap: wrap;
+      box-sizing: content-box;
+      max-width: 700px;
+      justify-content: space-between;
+    }
+
+    .temas h2 {
+      text-align: center;
+    }
+
+    #temas .img-b1, #temas h3 {
+      display: block;
+      padding: 0 30px;
+      max-width: 104px;
+    }
+
+    #temas .img-b1 {
+      align-items: flex-start;
+      float: inline-start;
+      order: -1;
+    }
+
+
+/* Novedades */
+    .novedades {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      min-height: 518px;
+    }
+
+    .novedades h2 {
+      text-align: center;
+    }
+
+/* Footer */
+    footer {
+      justify-content: space-between;
+      padding: 10px 70px 10px 70px;
+    }
+
+    .copyright, .redes {
+        display: inline-block;
+    }
+    
+    .copyright {
+      float: left;
+    }
+    
+    .redes {
+      float: right;
+    }    
+}
+ 
+@media only screen and (max-width: 900px) {
+  /*Menu  */
+  header img  {
+    display: block;
+    float: left;
+    max-width: 24px;
+    max-height: 24px;
+  }
+/* Menu dropdown */
+nav input:checked ~ label span:last-child {
+    display:none;
+}
+
+nav input:not(:checked) ~ label span:first-child { 
+    display:none;
+}
+
+label {
+    font-size: 24px;
+}
+
+nav {
+    position:relative;
+    right: 20px;
+    min-width:40px;
+    min-height:40px;
+    overflow:hidden;
+    text-align: right;
+    }
+
+nav ul {
+    overflow:hidden;
+    height:0;
+    padding:0;
+    margin:0;
+    transition:width 0.5s, height 0.5s;
+    list-style:none;
+    background-color: #0000EC;
+    }
+
+nav input:checked ~ ul {
+    min-width: 320px;
+    height:224px;
+    }    
+
+nav li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    min-height: 56px;
+    margin-left: 16px;
+    text-align: left;
+}    
+
+  /* Contenedor */
+  .container{
+    min-width: 350px;
+    overflow: hidden;
+  }
+
+  .desktop {
+    display: none;
+    width: 43.2%;
+  }
+    
+  .divisor, #phone img {
+    /* margin: 1rem; */
+    text-align: center;
+  }
+
+  /* Spotyfy */
+  #Episodes, .novedades {
+    background-color: darkblue;
+    clip-path: polygon(0 4%, 100% 0, 100% 95%, 0% 100%);
+    z-index: -1;
+  }
+
+  #Episodes {
+    box-sizing: content-box;
+    padding: 25px;
+  }
+
+  .spoty iframe {
+    width: 100%;
+    min-height: 232px;
+    padding: 0 11px 11px 0;
+  }
+
+/* Invitadas */
+  .Invitadas, #phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #phone img {
+    width: 360px;
+  }
+
+  .Invitadas img {
+    width: 320px;
+    height: 243px;
+  }
+
+/* Temas */
+  .img-b1 {
+    width: 104px;
+    height: 104px;
+  }
+
+/* Novedades */
+  .novedades {
+    padding: 20px 0 20px 0;
+    max-height: 341px;
+  }
+      
+  .novedades h2, .novedades .button {
+    text-align: center;
+  }
+
+/* Footer */
+  footer .far, footer p {
+    display: inline-block;
+  }  
+}
